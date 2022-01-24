@@ -1,1 +1,108 @@
 MOdificação do arquivo Read me.
+
+Para iniciar o versionamento em um projeto usando o Git, dentro da pasta do projeto execute o comando:
+
+git init
+
+Para adicionar os arquivos para salvar o commit, é necessário adicionar-los a fila, para isso execute o comando:
+
+git add <nome do arquivo>
+
+Ou se quiser adicionar todos os arquivos modificados à lista, execute:
+
+git add .
+
+Para salvar as alterações feitas, depois de adicionar os arquivos a fila, é necessário fazer o commit, para isso execute:
+
+git commit -m "Descrição do commit"
+
+Subindo para o Github
+Podemos sincronizar um local do Git com projeto remoto para fazer isso no Github que podemos vincular o local com esse recurso na hora.
+
+Para isso executamos:
+
+git remote add <apelido do repositorio remoto> <link do repositório>
+
+Por exemplo:
+
+git remote add origin https://github.com/Thiago-Nascimento/referencia-git
+
+Esse comando vincula um mandato remoto (link do governo) >), usando um "<apelido do governo>).
+
+Depois de subir ou de autoridade direta, já podemos fazer o commit para ele, isso usamos o comando vinculativo:
+
+git push <apelido do repositorio remoto> <branch atual>
+
+Por exemplo:
+
+git push origin main
+
+Esse comando sobe os commits feitos na branch (< branch atual>) para o repositorio remoto (< apelido do repositorio remoto>)
+
+Com esses passos já realizados o vai conter no os github commits.
+
+Caso queiramos trazer uma execução, para isso do github, teremos que clonar a máquina, para executar o comando:
+
+git clone <link do repositorio>
+
+Por exemplo:
+
+git clone https://github.com/Thiago-Nascimento/referencia-git
+
+Esse comando vai trazer uma alteração do compromisso, inclusive já push para os futuros commites.
+
+Agora para trazer as mudanças que estão no governo remoto, e ainda não estão localizados no poder local, definir o "desses commits". Para isso executamos:
+
+git pull <nome do repositorio> <nome da branch>
+
+Por exemplo:
+
+git pull origin main
+
+Se omitir o repositorio e o nome da filial, ficando simplesmente:
+
+git pull
+
+Filiais e Fusão
+O que são filiais?
+As ramificações são alteradas do código principal, onde geralmente não são criadas uma alteração do código em separado, geralmente não são criadas para desenvolver uma funcionalidade e ao mesmo tempo principal.
+
+É uma utilização prática entre os desenvolvedores, principalmente um ambiente de homologação, de teste, e colocado na produção, que códigos principais não são códigos diferentes para termos que são muito incrementados ao principal.
+
+Como trabalhar com as ramificações?
+Quando criamos um único diferente, por padrão, ele é um branch, que é um branch principal, geralmente tem o nome main.
+
+Para criarmos uma filial de homologação, podemos seguir os seguintes passos:
+
+Criando um branch de homologação
+Para criar um branch de homologação chamada desenvolver, executamos:
+
+git branch <nome da branch>
+
+Nesse caso:
+
+git branch develop
+
+Para usarmos um branch "desenvolver"
+Para usarmos essa branch criada temos que sair da branch "main" e ir para a "develop", para isso, executamos:
+
+git checkout <branch de destino>
+
+Nesse caso:
+
+git checkout develop
+
+Depois de subir os commits para os commits que ela fez para o branch, execute no Github, executamos:
+
+git push origin develop
+
+Juntando como filiais
+Quando queremos acessar o conteúdo das branches, temos que fazer o merge.
+
+Por exemplo, depois de uma revisão correta e sabendo que o código pode ser possível o código da branch de homologação ( develop), para a branch principal ( main), para isso...
+
+Primeiro mudamos para um diretor de filial
+git checkout main
+
+E juntamos o código da "develop" com a "main"
+git merge develop
